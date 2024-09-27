@@ -1,0 +1,290 @@
+<html>
+ <head>
+  <title>
+   CareDay
+  </title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="./style2.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style>
+   body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .header img {
+            height: 40px;
+        }
+        .header nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+        }
+        .header .buttons {
+            display: flex;
+            align-items: center;
+        }
+        .header .buttons a {
+            margin-left: 15px;
+            padding: 8px 20px;
+            text-decoration: none;
+            color: white;
+            background-color: #00bfff;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+        .header .buttons a.login {
+            background-color: white;
+            color: #333;
+            border: 1px solid #333;
+        }
+        .main-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px 20px;
+        }
+        .main-content .form-container {
+            max-width: 600px;
+        }
+        .main-content h1 {
+            color: #6b8e23;
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+        .main-content p {
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        .main-content form {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .main-content form .form-group {
+            width: 48%;
+            margin: 1%;
+        }
+        .main-content form .form-group.full-width {
+            width: 98%;
+        }
+        .main-content form input, .main-content form select {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .main-content form .submit-btn {
+            background-color: #6b8e23;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        .main-content .image-container {
+            max-width: 600px;
+        }
+        .main-content .image-container img {
+            width: 100%;
+            border-radius: 10px;
+        }
+  </style>
+ </head>
+ <body>
+    <div class="wrapper">
+        <aside id="sidebar">
+            <div class="d-flex">
+                <button id="toggle-btn">
+                    <i  class="bi bi-octagon"></i>
+                </button>
+                <div class="sidebar-logo">
+                    <a href="#">Oro Cash</a>
+                </div>
+            </div>
+            <ul class="sidebar-nav">
+                <li class="sidebar-item">
+                    <a href="./CrearCliente.html" class="sidebar-link">
+                        <i class="bi bi-person-fill"></i>
+                        <span>Crear Cliente</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="./Tabla.html" class="sidebar-link">
+                        <i class="bi bi-list-task"></i>
+                        <span>Registros</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#auth" aria-expanded="false" 
+                    aria-controls="auth">
+                        <i class="bi bi-person-lock"></i>
+                        <span>Auth</span>
+                    </a>
+                    <ul id="auth" class="sidebar-dropdown list-unstyled collapse" data-bs-parent="#sidebar">
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">Login</a>
+                        </li>                        
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link">Registro</a>
+                        </li>
+                        <li class="sidebar-item">
+                            <a href="#" class="sidebar-link has-dropdown collapsed" data-bs-toggle="collapse" data-bs-target="#multi" aria-expanded="false" 
+                            aria-controls="multi">
+                                <i class="bi bi-layout-three-columns"></i>
+                                <span>Multi Nivel</span>
+                            </a>
+                            <ul id="multi" class="sidebar-dropdown list-unstyled collapse">
+                                <li class="sidebar-item">
+                                    <a href="#" class="sidebar-link collapsed" data-bs-toggle="collapse" data-bs-target="#multi-two" aria-expanded="false" 
+                                    aria-controls="multi-two">
+                                        <span>Two Links</span>
+                                    </a>
+                                    <ul id="multi-two" class="sidebar-dropdown list-unstyled collapse">
+                                        <li class="sidebar-item">
+                                            <a href="#" class="sidebar-link">Link 1</a>
+                                        </li>
+                                        <li class="sidebar-item">
+                                            <a href="#" class="sidebar-link">Link 2</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <i class="bi bi-envelope-paper"></i>
+                        <span>Notidicaciones</span>
+                    </a>
+                </li>
+                <li class="sidebar-item">
+                    <a href="#" class="sidebar-link">
+                        <i class="bi bi-gear-fill"></i>
+                        <span>Configuración</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <a href="" class="sidebar-link">
+                    <i class="bi bi-ban-fill"></i>
+                    <span>Cerrar</span>
+                </a>
+            </div>
+        </aside>
+        <div class="main p-3">
+            <div class="main-content">
+                <div class="form-container">
+                 <h1>
+                  Creacion de Cliente.
+                 </h1>
+                 <p>
+                  Ingresar todos los datos obligatorios.
+                  <strong>
+                   OROCASH
+                  </strong>
+                  .
+                 </p>
+                 <form>
+                  <div class="form-group">
+                   <label for="first-name">
+                    Nombre
+                    <span style="color: red;">
+                     *
+                    </span>
+                   </label>
+                   <input id="first-name" name="first-name" type="text"/>
+                  </div>
+                  <div class="form-group">
+                   <label for="last-name">
+                    Apellido
+                    <span style="color: red;">
+                     *
+                    </span>
+                   </label>
+                   <input id="last-name" name="last-name" type="text"/>
+                  </div>
+                  <div class="form-group full-width">
+                   <label for="email">
+                    Email
+                    <span style="color: red;">
+                     *
+                    </span>
+                   </label>
+                   <input id="email" name="email" type="email"/>
+                  </div>
+                  <div class="form-group full-width">
+                   <label for="company">
+                    Dirección de Residencia
+                    <span style="color: red;">
+                     *
+                    </span>
+                   </label>
+                   <input id="company" name="company" type="text"/>
+                  </div>
+                  <div class="form-group full-width">
+                   <label for="phone">
+                    Número de Telefono
+                   </label>
+                   <input id="phone" name="phone" type="tel"/>
+                  </div>
+                  <div class="form-group full-width">
+                   <label for="job-title">
+                    Provincia
+                   </label>
+                   <input id="job-title" name="job-title" type="text"/>
+                  </div>
+                  <div class="form-group full-width">
+                   <label for="state">
+                    Distrito
+                   </label>
+                   <input id="state" name="state" type="text"/>
+                  </div>
+                  <div class="form-group full-width">
+                   <label for="software">
+                    Descripcion de Producto
+                   </label>
+                   <input id="software" name="software" type="text"/>
+                  </div>
+                  <div class="form-group full-width">
+                   <label for="enrollment">
+                    Tipo de Cliente
+                   </label>
+                   <select id="enrollment" name="enrollment">
+                    <option value="">
+                     Please Select
+                    </option>
+                   </select>
+                  </div>
+                  <button class="submit-btn" type="submit">
+                   Guardar
+                  </button>
+                 </form>
+                </div>
+                <div class="image-container">
+                 <img alt="Person using a laptop with a coffee cup and documents on the table" height="400" src="https://oaidalleapiprodscus.blob.core.windows.net/private/org-RcpoXHkzChYnDbFAyeQ8tamr/user-ehrvabJ3DufsCu8YJ7PqY5gl/img-7uScynV3jGI1D9OlIxWD8oZc.png?st=2024-09-26T18%3A43%3A49Z&amp;se=2024-09-26T20%3A43%3A49Z&amp;sp=r&amp;sv=2024-08-04&amp;sr=b&amp;rscd=inline&amp;rsct=image/png&amp;skoid=d505667d-d6c1-4a0a-bac7-5c84a87759f8&amp;sktid=a48cca56-e6da-484e-a814-9c849652bcb3&amp;skt=2024-09-26T18%3A14%3A01Z&amp;ske=2024-09-27T18%3A14%3A01Z&amp;sks=b&amp;skv=2024-08-04&amp;sig=f2UoVvYCFMNoZ1V67zWWtcJC2/q019J5w9VSLd4/j9o%3D" width="600"/>
+                </div>
+               </div>
+        </div>
+    </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="script_sidebar.js"></script>
+ </body>
+</html>
